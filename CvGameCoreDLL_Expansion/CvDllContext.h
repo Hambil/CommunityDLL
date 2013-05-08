@@ -35,7 +35,7 @@ public:
 	HANDLE GetHeap();
 
 	GUID DLLCALL GetDLLGUID();
-	const char * DLLCALL GetDLLVersion();
+	const char* DLLCALL GetDLLVersion();
 
 	ICvNetworkSyncronization1* DLLCALL GetNetworkSyncronizer();
 	ICvNetMessageHandler1* DLLCALL GetNetMessageHandler();
