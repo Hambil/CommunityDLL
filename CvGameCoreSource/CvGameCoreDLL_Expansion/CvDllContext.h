@@ -7,6 +7,7 @@
 	------------------------------------------------------------------------------------------------------- */
 #pragma once
 #include "CvDllInterfaces.h"
+#include "MyDefines.h"
 
 class CvDllNetworkSyncronization;
 class CvDllNetInitInfo;
