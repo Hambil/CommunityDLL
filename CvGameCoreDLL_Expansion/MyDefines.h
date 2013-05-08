@@ -9,10 +9,10 @@
 // Comment these lines out to remove the associated code from the DLL,
 
 // Adds various missing LUA functions
-#define MOD_GLOBAL_MISSING_LUA			true
+#define MOD_GLOBAL_MISSING_LUA			
 // Adds various missing XML tags
-#define MOD_GLOBAL_MISSING_XML_TAG	    true
+#define MOD_GLOBAL_MISSING_XML_TAG		
 // Adds various new functionality
-#define MOD_GLOBAL_NEW_FUNCTIONALITY	true
+#define MOD_GLOBAL_NEW_FUNCTIONALITY	
 
 #endif
