@@ -17,6 +17,7 @@
 #define CVLUAPLOT_H
 
 #include "CvLuaScopedInstance.h"
+#include "../MyDefines.h"
 
 class CvLuaPlot : public CvLuaScopedInstance<CvLuaPlot, CvPlot>
 {
@@ -40,11 +41,6 @@ protected:
 
 	//! (LUA) CvPlot::GetTerrainType.
 	static int lGetTerrainType(lua_State* L);
-
-#if defined(MOD_API_PLOT_BASED_DAMAGE)
-	//! (LUA) CvPlot::GetTerrainType.
-	static int lGetTurnDamage(lua_State* L);
-#endif
 
 	//! (LUA) CvPlot::IsRiver.
 	static int lIsRiver(lua_State* L);
@@ -71,9 +67,6 @@ protected:
 	static int lShareAdjacentArea(lua_State* L);
 	static int lIsAdjacentToLand(lua_State* L);
 	static int lIsAdjacentToShallowWater(lua_State* L);
-#if defined(MOD_PROMOTIONS_CROSS_ICE)
-	static int lIsAdjacentToIce(lua_State* L);
-#endif
 	static int lIsCoastalLand(lua_State* L);
 
 	static int lIsWithinTeamCityRadius(lua_State* L);
@@ -132,9 +125,6 @@ protected:
 
 	static int lIsCity(lua_State* L);
 	static int lIsFriendlyCity(lua_State* L);
-#if defined(MOD_GLOBAL_PASSABLE_FORTS)
-	static int lIsFriendlyCityOrPassableFort(lua_State* L);
-#endif
 	static int lIsEnemyCity(lua_State* L);
 	static int lIsBeingWorked(lua_State* L);
 
@@ -156,9 +146,6 @@ protected:
 
 	static int lGetX(lua_State* L);
 	static int lGetY(lua_State* L);
-#if defined(MOD_API_LUA_EXTENSIONS)
-	static int lGetIndex(lua_State* L);
-#endif
 	static int lAt(lua_State* L);
 	static int lGetLatitude(lua_State* L);
 	static int lArea(lua_State* L);
@@ -202,12 +189,12 @@ protected:
 
 	static int lGetOwner(lua_State* L);
 	static int lSetOwner(lua_State* L);
+#if defined(MOD_GLOBAL_MISSING_LUA)
+	static int lGetCity(lua_State* L);
+#endif
 	static int lGetPlotType(lua_State* L);
 	static int lIsFlatlands(lua_State* L);
 	static int lIsHills(lua_State* L);
-#if defined(MOD_PATHFINDER_TERRAFIRMA)
-	static int lIsTerraFirma(lua_State* L);
-#endif
 	static int lIsOpenGround(lua_State* L);
 	static int lIsRoughGround(lua_State* L);
 	static int lIsMountain(lua_State* L);
